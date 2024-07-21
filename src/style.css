@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --bg-color: #e5eaee;
+  --color-primary: #9ede98;
+  --color-secondary: white;
+  --font-family: "Open sans", "Arial", "Helvetica", sans-serif;
+}
+
+body {
+  height: 100vh;
+  font-family: var(--font-family);
+  line-height: 1;
+  background-color: var(--bg-color);
+  margin: 30px;
+  overflow-y: auto;
+  max-height: 80vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  padding: 16px;
+  text-shadow: 3px 3px 4px #888;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+}
+
+.search-bar input {
+  margin-right: 8px;
+  border-radius: 8px;
+  border: 0.5px solid #9ede98;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+.search-bar input::placeholder {
+  color: #b0d2ad; /* Colore verde chiaro */
+}
+
+.search-bar input:focus {
+  outline: none; /* Rimuove l'outline di default */
+  border: 0.5px solid #9ede98; /* Mantiene il colore del bordo invariato */
+}
+
+button {
+  color: var(--color-secondary);
+  border-radius: 8px;
+  border: none;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--color-primary);
+  cursor: pointer;
+}
+button:hover {
+  background-color: #04571e;
+}
+
+.listado-personajes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.personaje {
+  background-color: var(--color-secondary);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+  padding: 16px;
+  max-width: 300px;
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.personaje img {
+  display: flex;
+  justify-content: center;
+  border-radius: 8px;
+  max-width: 100%;
+  max-height: 50%;
+}
+
+.personaje p {
+  margin: 8px;
+}
